@@ -1,0 +1,30 @@
+@import '../blog/blog.component.scss';
+
+h1,h2,h3,h4,h5,h6{
+    color: #444;
+}
+
+.landing-blog{
+
+    background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 54, 201, 0.705),
+      rgba(0, 112, 187, 0.541)
+    ),
+    url(https://d24x5qendt1bag.cloudfront.net/uploads/2019/08/27092536/ME_Image-1.jpg);
+   
+    .p-date{
+        text-align: center;
+        color: #fff;
+        font-size: 1.2rem;
+        i{
+            color: #fff;
+        }
+    }
+}
+
+.blog-content{
+    padding: 4rem 2rem;
+    max-width: 700px;
+    margin: auto;
+}

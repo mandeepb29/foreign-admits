@@ -1,0 +1,52 @@
+
+.popular-card{
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    position: relative;
+
+    p{
+        margin-bottom: 0;
+        line-height: 1.7;
+        padding: 0.2rem;
+        border-bottom: 0.8px solid rgba(0, 0, 0, 0.151);
+    }
+    p:last-child{
+        border-bottom:none;
+    }
+    p:nth-of-type(odd){
+        background-color: #fff;
+    }
+
+    h3{
+        padding: 1rem;
+    border-bottom: 1px solid #cecece;
+    }
+}
+
+.p-img{
+    max-height: 100%;
+    img{
+    object-fit: cover;
+    object-position: center;
+    }
+}
+.p-content{
+    flex: auto;
+    padding: 0;
+}
+
+.p-details{
+    p{
+        padding: 0.2rem 1rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #777;
+    }
+}
+
+
+
+.p-footer{
+    box-shadow:none;
+}
