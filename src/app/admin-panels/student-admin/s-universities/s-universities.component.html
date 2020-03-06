@@ -1,0 +1,78 @@
+ <!-- Header -->
+ <div class="header bg-primary pb-6">
+ 
+    <h1>
+      Universities
+    </h1>
+
+</div>
+
+
+<!-- Page content -->
+<div class="container-fluid mt--6">
+
+    <ngx-masonry [options]="{ transitionDuration: 0 }" [useImagesLoaded]="true">
+        <div
+          ngxMasonryItem
+          class="masonry-item"
+          *ngFor="let uni of universities; let i = index"
+        >
+        <div class="card dash-card">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h2 class="mb-0">{{uni.name}}</h2>
+                </div>
+               
+              </div>
+            </div>
+           <div class="card-body border-0 ">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 text-center">
+                        <img [src]="uni.img" alt="">
+                    </div>
+                    <div class="col-sm-12">
+                      <p> {{uni.desc}}</p>
+                  </div>
+                  <div class="col text-center">
+                      <a href="#!" class="btn btn-sm btn-primary">View Details</a>
+                    </div>
+                </div>
+           
+            </div>
+          
+       
+      </div>
+
+        </div>
+
+      </ngx-masonry>
+
+   
+<!-- Footer -->
+<!-- <footer class="footer pt-0">
+  <div class="row align-items-center justify-content-lg-between">
+    <div class="col-lg-6">
+      <div class="copyright text-center  text-lg-left  text-muted">
+        &copy; 2020 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+        <li class="nav-item">
+          <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer> -->
+</div>

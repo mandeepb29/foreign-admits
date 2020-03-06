@@ -1,43 +1,54 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './fa-website/home/home.component';
+import { FaWebsiteComponent } from './fa-website/fa-website.component';
 
 const routes: Routes = [
   {
-    path:'home',
+    path: '',
+    component: FaWebsiteComponent,
+    children: [
+  {
+    path:'',
     component:HomeComponent
   },
   {
     path:'plan-and-pricing',
-    loadChildren: './plans-and-pricing/plans-and-pricing.module#PlansAndPricingModule'
+    loadChildren: './fa-website/plans-and-pricing/plans-and-pricing.module#PlansAndPricingModule'
   },
   {
     path:'mentors',
-    loadChildren: './mentors/mentors.module#MentorsModule'
+    loadChildren: './fa-website/mentors/mentors.module#MentorsModule'
   },
   {
     path:'contact',
-    loadChildren: './contact/contact.module#ContactModule'
+    loadChildren: './fa-website/contact/contact.module#ContactModule'
   },
   {
     path:'events',
-    loadChildren: './events/events.module#EventsModule'
+    loadChildren: './fa-website/events/events.module#EventsModule'
   },
   {
     path:'universities',
-    loadChildren: './universities/universities.module#UniversitiesModule'
+    loadChildren: './fa-website/universities/universities.module#UniversitiesModule'
   },
   {
     path:'blog',
-    loadChildren: './blog/blog.module#BlogModule'
+    loadChildren: './fa-website/blog/blog.module#BlogModule'
   },
   {
     path:'blogpost',
-    loadChildren: './blog-post/blog-post.module#BlogPostModule'
+    loadChildren: './fa-website/blog-post/blog-post.module#BlogPostModule'
+  }
+]
+  },
+  {
+    path:'student',
+    loadChildren: './admin-panels/student-admin/student-admin.module#StudentAdminModule'
   },
   {
     path: '**',
-    redirectTo: '/home',
+    redirectTo: '/',
     pathMatch: 'full'
   }
 ];
