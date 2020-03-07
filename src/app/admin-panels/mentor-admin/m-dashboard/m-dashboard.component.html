@@ -1,0 +1,104 @@
+<!-- Header -->
+<div class="header bg-primary pb-6">
+    <h1>
+      Your Appointments
+    </h1>
+  </div>
+  
+  <!-- Page content -->
+  <div class="container-fluid">
+   <div class="row">
+       <div class="col-lg-4 col-md-6" *ngFor="let item of bookings">
+        <div class="card dash-card">
+         
+            <div class="card-body border-0 ">
+              <div class="row align-items-center">
+                <div class="col-sm-12 text-center">
+                  <img [src]="item.img" alt="" />
+                </div>
+            </div> 
+            <h2 class="text-center">{{ item.name }}</h2>
+            <div class="stat">
+               
+                <h4>
+                 {{item.uni}}
+              </h4>
+              <h4>
+                   Specialization: {{item.spec}}
+              </h4>
+              <hr class="my-3">
+              <div class="row">
+                <div class="col-6">
+                    <h4>
+                        <img src="assets/images/icons/calendar.svg" alt="">{{item.date}}
+                    </h4> 
+                </div>
+                <div class="col-6">
+                    <h4>
+                        <img src="assets/images/icons/clock.svg" alt=""> {{item.time}}
+                    </h4> 
+                </div>
+            </div>
+    </div>
+          
+                
+              </div>
+            </div>
+       </div>
+   </div>
+       
+
+  </div>
+
+    <!-- mentor login modal-->
+<div class="modal" id="registerMentor">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <h2 class="text-center mb-2">Apply for FOREX Help</h2>
+          <div class="modal-img">
+            <img src="assets/images/icons/forex.svg" alt="">
+          </div>
+          <form action="#" method="post">
+            <div class="form-group row">
+              <div class="col-md-12 mb-4 mb-lg-0">
+                <input type="number" class="form-control" placeholder="Phone" />
+              </div>
+            </div>
+           
+            <div class="form-group row">
+                <div class="col-md-12">
+                  <input type="number" class="form-control" placeholder="Amount" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <input type="number" class="form-control" placeholder="Location" />
+                </div>
+              </div>
+            <div class="form-group row">
+                <div class="col-md-12">
+                  <input type="date" class="form-control" placeholder="Date" />
+                </div>
+              </div>
+             
+            <div class="form-group row">
+              <div class="col-md-12">
+                <button class="btn w-100 btn-primary">
+                  Confirm
+                </button>
+              </div>
+            </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

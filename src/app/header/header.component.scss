@@ -8,6 +8,10 @@
     filter: brightness(0) invert(1);
 }
 
+.nav-link{
+    cursor: pointer;
+}
+
 .fixed-header{
     background-color: #fff !important;
     height: 70px;
@@ -20,6 +24,13 @@
         li a{
             color: #444;
         }
+    }
+}
+
+.modal-img{
+    h5{
+        margin-top: 0.5rem;
+        color: #101010;
     }
 }
 

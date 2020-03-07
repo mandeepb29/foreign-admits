@@ -24,9 +24,50 @@
               <li><a [routerLink]="['/plan-and-pricing']" class="nav-link">Plans and Pricing</a></li>
               <li><a [routerLink]="['/blog']" class="nav-link">Blog</a></li>
               <li><a [routerLink]="['/contact']" class="nav-link">Contact</a></li>
-              <!-- <li><a class="nav-link">Login</a></li> -->
-
+              <li><a  class="nav-link" data-toggle="modal" data-target="#loginModal">Login</a></li>
             </ul>
           </nav>
 
   </header>
+
+  <!--- modal-->
+<div class="modal" id="loginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h2 class="text-center">Login as</h2>
+        <hr>
+        <div class="row">
+          <div class="col-6">
+            <a [routerLink]="['/student-login']" data-dismiss="modal">
+            <div class="modal-img">
+              <img src="assets/images/icons/student.svg" alt="">
+              <h5>
+                Student
+              </h5>
+            </div>
+          </a>
+          </div>
+          <div class="col-6">
+            <a [routerLink]="['/mentor-login']" data-dismiss="modal">
+              <div class="modal-img">
+                <img src="assets/images/icons/teacher.svg" alt="">
+                <h5>
+                  Mentor
+                </h5>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-small btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>

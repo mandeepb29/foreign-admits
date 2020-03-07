@@ -1,0 +1,32 @@
+.main-content{
+    margin-left: 0;
+}
+.header {
+  margin-bottom: 0;
+}
+
+.bg-default {
+    background-color: #0f072f !important;
+}
+
+.form-control{
+    border: none !important;
+}
+
+.welcome-text{
+    font-size: 2.5rem;
+}
+
+.logo{
+    filter:brightness(0) invert(1) ;
+    width: 180px;
+    height: auto;
+}
+
+.header{
+    background-image: linear-gradient(to bottom right, rgba(58, 45, 193, 0.91), rgba(20, 0, 72, 0.98)), url(/assets/images/s-login-bg.jpeg);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

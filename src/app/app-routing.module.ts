@@ -47,6 +47,26 @@ const routes: Routes = [
     loadChildren: './admin-panels/student-admin/student-admin.module#StudentAdminModule'
   },
   {
+    path:'mentor',
+    loadChildren: './admin-panels/mentor-admin/mentor-admin.module#MentorAdminModule'
+  },
+  {
+    path:'student-login',
+    loadChildren: './login-signup-pages/student-login/student-login.module#StudentLoginModule'
+  },
+  {
+    path:'student-reg',
+    loadChildren: './login-signup-pages/student-reg/student-reg.module#StudentRegModule'
+  },
+  {
+    path:'mentor-login',
+    loadChildren: './login-signup-pages/mentor-login/mentor-login.module#MentorLoginModule'
+  },
+  {
+    path:'mentor-reg',
+    loadChildren: './login-signup-pages/mentor-reg/mentor-reg.module#MentorRegModule'
+  },
+  {
     path: '**',
     redirectTo: '/',
     pathMatch: 'full'

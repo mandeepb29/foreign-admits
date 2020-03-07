@@ -7,7 +7,7 @@
         Better Education, <br />
         Better World.
       </h1>
-      <p class="mb-0 mt-4"><a href="#" class="btn">Get Started</a></p>
+      <p class="mb-0 mt-4"><button  data-toggle="modal" data-target="#loginModal" class="btn">Get Started</button></p>
     </div>
   </div>
 </div>
@@ -547,7 +547,7 @@
     </div>
 
 <div class="text-center">
-  <button class="btn mt-4" data-toggle="modal" data-target="#mregModal">
+  <button [routerLink]="['/mentor-reg']" class="btn mt-4">
     Register as mentor
   </button>
 </div>
@@ -1070,3 +1070,46 @@
     </div>
   </div>
 </div>
+
+
+  <!---get started modal-->
+  <div class="modal" id="loginModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h2 class="text-center">Login as</h2>
+          <hr>
+          <div class="row">
+            <div class="col-6">
+              <a [routerLink]="['/student-login']" data-dismiss="modal">
+              <div class="modal-img">
+                <img src="assets/images/icons/student.svg" alt="">
+                <h5>
+                  Student
+                </h5>
+              </div>
+            </a>
+            </div>
+            <div class="col-6">
+              <a [routerLink]="['/mentor-login']" data-dismiss="modal">
+                <div class="modal-img">
+                  <img src="assets/images/icons/teacher.svg" alt="">
+                  <h5>
+                    Mentor
+                  </h5>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-small btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
