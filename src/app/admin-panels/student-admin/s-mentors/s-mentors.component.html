@@ -1,0 +1,136 @@
+<!-- Header -->
+<div class="header bg-primary pb-6">
+    <h1>
+      Mentors
+    </h1>
+  </div>
+  <div class="container-fluid">
+          <div class="pl-lg-4">
+            
+                <form>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="form-control-label" for="input-username"
+                            >Specialization</label
+                          >
+                          <select class="custom-select js-select2 ng-pristine ng-valid ng-touched" name="country">
+                            <option value="">Select Specialization</option>
+                             <!----><option value="test">test</option> 
+                           </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="form-control-label" for="input-username"
+                            >University</label
+                          >
+                          <select class="custom-select js-select2 ng-pristine ng-valid ng-touched" name="country">
+                            <option value="">Select University</option>
+                             <!----><option value="test">test</option> 
+                           </select>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 d-flex align-items-center">
+                        <div class="text-center mt-1">
+                          <a href="#!" class="btn btn-primary">Apply Filter</a>
+                        </div> 
+                      </div>
+                </div>
+                </form>
+              </div>
+          </div>
+
+  
+  <!-- Page content -->
+  <div class="container-fluid">
+    <ngx-masonry [options]="{ transitionDuration: 0 }" [useImagesLoaded]="true">
+      <div
+        ngxMasonryItem
+        class="masonry-item"
+        *ngFor="let mentor of mentors; let i = index"
+      >
+        <div class="card dash-card">
+         
+          <div class="card-body border-0 ">
+            <div class="row align-items-center">
+              <div class="col-sm-12 text-center">
+                <img [src]="mentor.img" alt="" />
+              </div>
+          </div> 
+          <h2 class=" mentor-name">{{ mentor.name }}</h2>
+          <div class="mentor-stat">
+                      <h4> {{mentor.uni}}
+                      </h4>
+                      <h4>
+                        Specialization: {{mentor.spec}}
+                    </h4>
+                 
+          </div>
+        
+              <div class="col-sm-12">
+                <h2 class="text-center">
+                    About Mentor
+                </h2>
+                <p>{{ mentor.desc }}</p>
+              </div>
+              <div class="col text-center card-footer">
+                <button type="button"
+                data-toggle="modal" data-target="#registerMentor"
+                  class="btn btn-sm btn-primary"
+                  >Book Appointment</button
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+     
+    </ngx-masonry>
+
+  </div>
+
+    <!-- mentor login modal-->
+<div class="modal" id="registerMentor">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <h2 class="text-center mb-2">Appoint Mentor</h2>
+          <div class="modal-img">
+            <img src="assets/images/icons/teacher.svg" alt="">
+          </div>
+          <form action="#" method="post">
+            <div class="form-group row">
+              <div class="col-md-12 mb-4 mb-lg-0">
+                <input type="time" class="form-control" placeholder="Time for appointment" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-12">
+                <input type="date" class="form-control" placeholder="Date of Appointment" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-12">
+                <button class="btn w-100 btn-primary">
+                  Register
+                </button>
+              </div>
+            </div>
+            </form>
+        </div>
+        <!-- Modal footer -->
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-small btn-danger" data-dismiss="modal">Close</button>
+        </div> -->
+  
+      </div>
+    </div>
+  </div>
+  

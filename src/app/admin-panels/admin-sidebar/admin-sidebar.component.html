@@ -13,65 +13,87 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" [routerLink]="['/student']">
+              <a class="nav-link" [routerLink]="['/student']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">
                 <i class="ni ni-tv-2 text-primary"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
              <li class="nav-item">
-              <a class="nav-link" [routerLink]="['./universities']">
-                <i class="ni ni-tv-2 text-primary"></i>
+              <a class="nav-link" [routerLink]="['./universities']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                true}">
+                <i class="ni ni-bullet-list-67 text-red"></i>
                 <span class="nav-link-text">Universities</span>
               </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['./profile']">
-                  <i class="ni ni-tv-2 text-primary"></i>
+                <a class="nav-link" [routerLink]="['./profile']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                  true}">
+                  <i class="ni ni-single-02 text-purple"></i>
                   <span class="nav-link-text">Profile</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['./mentors']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                  true}">
+                  <i class="ni ni-briefcase-24 text-info"></i>
+                  <span class="nav-link-text">Mentors</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['./upload-docs']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                  true}">
+                  <i class="ni ni-single-copy-04 text-default"></i>
+                  <span class="nav-link-text">Upload Documents</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['./mock-visa']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                  true}">
+                  <i class="ni ni-badge text-pink"></i>
+                  <span class="nav-link-text">Mock Visa Help</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['./accomodation']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                  true}">
+                  <i class="ni ni-building text-black"></i>
+                  <span class="nav-link-text">Accomodation Help</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['./loan']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                  true}">
+                  <i class="ni ni-money-coins text-green"></i>
+                  <span class="nav-link-text">Loan Help</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['./air-travel']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                  true}">
+                  <i class="ni ni-send text-blue"></i>
+                  <span class="nav-link-text">Air Travel Help</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['./forex']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                  true}">
+                  <i class="ni ni-credit-card text-yellow"></i>
+                  <span class="nav-link-text">Forex Help</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['./booked-mentors']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+                  true}">
+                  <i class="ni ni-calendar-grid-58 text-orange"></i>
+                  <span class="nav-link-text">Mentors Booking</span>
                 </a>
               </li>
           
           </ul>
           <!-- Divider -->
           <hr class="my-3">
-          <!-- Heading -->
-          <!-- <h6 class="navbar-heading p-0 text-muted">
-            <span class="docs-normal">Documentation</span>
-          </h6> -->
-         
-          <!-- <ul class="navbar-nav mb-md-3">
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
-                <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Getting started</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
-                <i class="ni ni-palette"></i>
-                <span class="nav-link-text">Foundation</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
-                <i class="ni ni-ui-04"></i>
-                <span class="nav-link-text">Components</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
-                <i class="ni ni-chart-pie-35"></i>
-                <span class="nav-link-text">Plugins</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active active-pro" href="examples/upgrade.html">
-                <i class="ni ni-send text-dark"></i>
-                <span class="nav-link-text">Upgrade to PRO</span>
-              </a>
-            </li>
-          </ul> -->
-        </div>
+         </div>
       </div>
     </div>
   </nav>
