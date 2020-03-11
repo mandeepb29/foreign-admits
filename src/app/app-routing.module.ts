@@ -37,7 +37,7 @@ const routes: Routes = [
     loadChildren: './fa-website/blog/blog.module#BlogModule'
   },
   {
-    path:'blogpost',
+    path:'blogpost/:id',
     loadChildren: './fa-website/blog-post/blog-post.module#BlogPostModule'
   }
 ]

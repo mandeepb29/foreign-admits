@@ -28,15 +28,15 @@
       <div class="col-lg-6">
         <div class="custom-card">
           <h2 class="mb-4">Find your dream college.</h2>
-          <form action="#" method="post">
+          <form [formGroup]="form" (submit)="register()">
             <div class="form-group row">
               <div class="col-md-12 mb-4 mb-lg-0">
-                <input type="text" class="form-control" placeholder="Name" />
+                <input formControlName="name" type="text" class="form-control" placeholder="Name" />
               </div>
             </div>
             <div class="form-group row">
               <div class="col-md-12">
-                <input type="text" class="form-control" placeholder="Email" />
+                <input formControlName="email" type="text" class="form-control" placeholder="Email" />
               </div>
             </div>
 
@@ -281,6 +281,7 @@
               </div>
               <div class="col-md-7">
                 <input
+                formControlName="contact_no"
                   type="number"
                   class="form-control"
                   placeholder="Phone Number"
@@ -290,7 +291,7 @@
 
             <div class="form-group row">
               <div class="col-md-5">
-                <select class="form-control">
+                <select formControlName="term" class="form-control">
 									<option selected="" value="out of 4">Select Your Term</option>
 									<option value="Fall 2019"> Fall 2019 </option>
 									<option value="Spring 2019">Spring 2019</option>
@@ -308,6 +309,7 @@
                 </div>
                 <div class="col-md-7">
                   <input
+                  formControlName="gre_verbal"
                   type="number"
                   class="form-control"
                   placeholder="GRE Verbal Score"
@@ -317,6 +319,7 @@
             <div class="form-group row">
               <div class="col-md-6 mb-4 mb-lg-0">
                 <input
+                formControlName="gre_toefl"
                   type="number"
                   class="form-control"
                   placeholder="GRE Verbal Score"
@@ -324,6 +327,7 @@
               </div>
               <div class="col-md-6">
                 <input
+                formControlName="gre_quant"
                   type="number"
                   class="form-control"
                   placeholder="GRE Quant Score"
@@ -383,7 +387,7 @@
               <i class="fa fa-star" aria-hidden="true"></i>
               4.5
             </div>
-          
+
             <div class="p-price">
               <span>
                 <i class="fa fa-usd" aria-hidden="true"></i>
@@ -393,7 +397,7 @@
             <button class="btn btn-small btn-black" data-toggle="modal" data-target="#courseModal">
               Buy
             </button>
-         
+
           </div>
         </div>
       </div>
@@ -420,7 +424,7 @@
               <i class="fa fa-star" aria-hidden="true"></i>
               4.5
             </div>
-          
+
             <div class="p-price">
               <span>
                 <i class="fa fa-usd" aria-hidden="true"></i>
@@ -430,7 +434,7 @@
             <button class="btn btn-small btn-black" data-toggle="modal" data-target="#courseModal">
               Buy
             </button>
-         
+
           </div>
         </div>
       </div>
@@ -457,7 +461,7 @@
               <i class="fa fa-star" aria-hidden="true"></i>
               4.5
             </div>
-          
+
             <div class="p-price">
               <span>
                 <i class="fa fa-usd" aria-hidden="true"></i>
@@ -467,7 +471,7 @@
             <button class="btn btn-small btn-black" data-toggle="modal" data-target="#courseModal">
               Buy
             </button>
-         
+
           </div>
         </div>
       </div>
@@ -551,7 +555,7 @@
     Register as mentor
   </button>
 </div>
-    
+
   </div>
 </div>
 <div class="img-gradient-bg">
@@ -654,8 +658,8 @@
     <div class="row">
       <div
         class="col-md-6 mb-4 col-lg-4"
-       
-        
+
+
       >
         <div class="service-29193 text-center">
           <span class="img-wrap">
@@ -671,8 +675,8 @@
       </div>
       <div
         class="col-md-6 mb-4 col-lg-4"
-       
-        
+
+
       >
         <div class="service-29193 text-center">
           <span class="img-wrap">
@@ -716,8 +720,8 @@
       </div>
       <div
         class="col-md-6 mb-4 col-lg-4"
-       
-        
+
+
       >
         <div class="service-29193 text-center">
           <span class="img-wrap">
@@ -733,8 +737,8 @@
       </div>
       <div
         class="col-md-6 mb-4 col-lg-4"
-       
-        
+
+
       >
         <div class="service-29193 text-center">
           <span class="img-wrap">
@@ -761,7 +765,7 @@
      <div class="col-lg-2 col-md-3">
        <img src="assets/images/logos/r1.png" alt="">
      </div>
-    
+
     <div class="col-lg-2 col-md-3">
       <img src="assets/images/logos/r3.jpg" alt="">
     </div>
@@ -784,7 +788,7 @@
           Our partners in making your future better
         </h2>
         <div class="row align-items-center justify-content-center">
-        
+
          <div class="col-lg-4">
           <img src="assets/images/logos/p2.png" alt="">
         </div>
@@ -794,7 +798,7 @@
         <div class="col-lg-4">
           <img src="assets/images/logos/p3.png" alt="">
         </div>
-      
+
         </div>
         </div>
         </div>
@@ -830,7 +834,7 @@
  Add to cart
               </button>
             </div>
-          
+
           </div>
           </form>
       </div>
@@ -1076,7 +1080,7 @@
   <div class="modal" id="loginModal">
     <div class="modal-dialog">
       <div class="modal-content">
-  
+
         <!-- Modal body -->
         <div class="modal-body">
           <h2 class="text-center">Login as</h2>
@@ -1104,12 +1108,12 @@
             </div>
           </div>
         </div>
-  
+
         <!-- Modal footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-small btn-danger" data-dismiss="modal">Close</button>
         </div>
-  
+
       </div>
     </div>
   </div>

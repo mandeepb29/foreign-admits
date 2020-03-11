@@ -1,22 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EventsComponent } from './events.component';
+import { EventsTableComponent } from './events-table.component';
 import { RouterModule ,Route} from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Route[]=[
   {
   path: '',
-  component: EventsComponent
+  component: EventsTableComponent
   }
 ]
+
+
 @NgModule({
-  declarations: [EventsComponent],
+  declarations: [EventsTableComponent],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
     RouterModule.forChild(routes)
   ]
 })
-export class EventsModule { }
+export class EventsTableModule { }

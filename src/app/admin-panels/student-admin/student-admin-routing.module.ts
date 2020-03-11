@@ -21,6 +21,8 @@ const routes: Routes = [
         { path: 'air-travel', loadChildren: './air-travel/air-travel.module#AirTravelModule' },
         { path: 'booked-mentors', loadChildren: './booked-mentors/booked-mentors.module#BookedMentorsModule' },
         { path: 'services-applied', loadChildren: './services-applied/services-applied.module#ServicesAppliedModule' },
+        { path: 'payments', loadChildren: './payments/payments.module#PaymentsModule' },
+        { path: 'events', loadChildren: './events-table/events-table.module#EventsTableModule' },
       ]
     }
   ];

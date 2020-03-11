@@ -4,51 +4,55 @@
       Mentor Bookings
     </h1>
   </div>
-  
+
+  <div class="page-content">
   <!-- Page content -->
   <div class="container-fluid">
-   <div class="row">
-       <div class="col-lg-4 col-md-6" *ngFor="let item of bookings">
-        <div class="card dash-card">
-         
-            <div class="card-body border-0 ">
-              <div class="row align-items-center">
-                <div class="col-sm-12 text-center">
-                  <img [src]="item.img" alt="" />
-                </div>
-            </div> 
-            <h2 class="text-center">{{ item.name }}</h2>
-            <div class="stat">
-               
-                <h4>
-                 {{item.uni}}
-              </h4>
-              <h4>
-                   Specialization: {{item.spec}}
-              </h4>
-              <hr class="my-3">
-              <div class="row">
-                <div class="col-6">
-                    <h4>
-                        <img src="assets/images/icons/calendar.svg" alt="">{{item.date}}
-                    </h4> 
-                </div>
-                <div class="col-6">
-                    <h4>
-                        <img src="assets/images/icons/clock.svg" alt=""> {{item.time}}
-                    </h4> 
-                </div>
-            </div>
-    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6" *ngFor="let item of bookings">
+         <div class="card dash-card">
           
+             <div class="card-body border-0 ">
+               <div class="row align-items-center">
+                 <div class="col-sm-12 text-center">
+                   <img [src]="item.img" alt="" />
+                 </div>
+             </div> 
+             <h2 class="text-center">{{ item.name }}</h2>
+             <div class="stat">
                 
-              </div>
-            </div>
-       </div>
+                 <h4>
+                  {{item.uni}}
+               </h4>
+               <h4>
+                    Specialization: {{item.spec}}
+               </h4>
+               <hr class="my-3">
+               <div class="row">
+                 <div class="col-6">
+                     <h4>
+                         <img src="assets/images/icons/calendar.svg" alt="">{{item.date}}
+                     </h4> 
+                 </div>
+                 <div class="col-6">
+                     <h4>
+                         <img src="assets/images/icons/clock.svg" alt=""> {{item.time}}
+                     </h4> 
+                 </div>
+             </div>
+     </div>
+           
+                 
+               </div>
+             </div>
+        </div>
+    </div>
+        
+ 
    </div>
-       
-
+ 
   </div>
+  
 
     <!-- mentor login modal-->
 <div class="modal" id="registerMentor">

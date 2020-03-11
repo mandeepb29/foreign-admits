@@ -14,7 +14,7 @@
               </a>
             </div>
             <div class="ml-auto toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-white"><span class="icon-menu h3 text-primary"></span></a></div>
-       
+
           <nav class="site-navigation text-right ml-auto " role="navigation">
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block" [ngClass]="{'white-nav' : whiteHeader}">
               <li><a [routerLink]="['/home']" class="nav-link">Home</a></li>
@@ -24,7 +24,8 @@
               <li><a [routerLink]="['/plan-and-pricing']" class="nav-link">Plans and Pricing</a></li>
               <li><a [routerLink]="['/blog']" class="nav-link">Blog</a></li>
               <li><a [routerLink]="['/contact']" class="nav-link">Contact</a></li>
-              <li><a  class="nav-link" data-toggle="modal" data-target="#loginModal">Login</a></li>
+              <li *ngIf="!auth.token"><a  class="nav-link" data-toggle="modal" data-target="#loginModal">Login</a></li>
+              <li *ngIf="auth.token"><a  class="nav-link"(click)="logout()">Logout</a></li>
             </ul>
           </nav>
 

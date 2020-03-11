@@ -5,6 +5,7 @@ import {
   NavigationEnd,
   ActivatedRoute
 } from "@angular/router";
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +16,9 @@ export class AppComponent implements OnInit {
   title = 'fadmits';
   private lastPoppedUrl: string;
   private yScrollStack: number[] = [];
-  constructor( public router: Router,){}
+  constructor( public router: Router,public auth: AuthService){}
   ngOnInit(){
+    this.auth.checkLocalStorage();
     this.router.events.subscribe((ev: any) => {
       if (ev instanceof NavigationStart) {
         if (ev.url != this.lastPoppedUrl)
